@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 public class Course
 {
     @Id
-    private long id;
+    private Long id;
     private String name;
 
     private String author;

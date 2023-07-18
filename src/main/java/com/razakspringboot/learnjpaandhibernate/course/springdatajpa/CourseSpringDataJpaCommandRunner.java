@@ -4,9 +4,11 @@ import com.razakspringboot.learnjpaandhibernate.course.Course;
 import com.razakspringboot.learnjpaandhibernate.course.jpa.CourseJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
+@Primary
 public class CourseSpringDataJpaCommandRunner implements CommandLineRunner
 {
     @Autowired
@@ -25,6 +27,10 @@ public class CourseSpringDataJpaCommandRunner implements CommandLineRunner
         repository.deleteById(1l);
         System.out.println(repository.findById(2l));
         System.out.println(repository.findById(3l));
+        System.out.println(repository.findAll());
+
+        System.out.println(repository.findByAuthor(""));
+
 
 
     }
